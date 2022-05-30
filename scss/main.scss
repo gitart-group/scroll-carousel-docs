@@ -1,0 +1,56 @@
+body {
+  overflow-y: scroll;
+}
+
+$accent: #6366f1;
+
+.dark {
+  --gsc-custom-arrow-bg: #{$accent};
+  --gsc-custom-arrow-bg-hover: #{darken($accent, 4%)};
+
+  --gsc-custom-indicator-track-color: rgb(54, 54, 54);
+  --gsc-custom-indicator-bar-color: #{lighten($accent, 10%)};
+}
+
+.btn {
+  @apply
+  inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+
+  &--active {
+    @apply
+    bg-indigo-600;
+  }
+  
+  &--group {
+    @apply
+      rounded-none;
+
+    &:not(.btn--group-first, .btn--group-last) {
+      @apply
+        border-r-gray-200;
+    }
+  }
+
+  &--group-first {
+    @apply
+      border-r-gray-200
+      rounded-l-md;
+  }
+
+  &--group-last {
+    @apply
+      rounded-r-md;
+  }
+}
+
+// <div class="inline-flex rounded-md shadow-sm" role="group">
+//   <button type="button" class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+//     Profile
+//   </button>
+//   <button type="button" class="py-2 px-4 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+//     Settings
+//   </button>
+//   <button type="button" class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-r-md border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+//     Messages
+//   </button>
+// </div>
