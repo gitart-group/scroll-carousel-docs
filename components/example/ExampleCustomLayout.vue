@@ -2,11 +2,10 @@
 import { GSCarousel } from 'gitart-scroll-carousel'
 import 'gitart-scroll-carousel/dist/index.css'
 
-import { createItems } from './shared/helpers'
-import ImageSlide from './shared/ImageSlide.vue'
-import CustomLayout from './shared/CustomLayout.vue'
+import CustomLayout from '@/components/shared/CustomLayout.vue'
+import ImageSlide from '@/components/shared/ImageSlide.vue'
 
-const items = createItems(15)
+const items = useItems(15)
 
 const layoutProps = reactive({
   title: 'Hello Custom Layout',

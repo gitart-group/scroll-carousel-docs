@@ -12,7 +12,7 @@ defineProps<{
       alt=""
     >
     <div class="absolute top-5 left-5 w-10 h-10 bg-gray-800 bg-opacity-90 text-white rounded-full text-md font-bold flex items-center justify-center">
-      {{ index }}
+      {{ index + 1 }}
     </div>
   </div>
 </template>

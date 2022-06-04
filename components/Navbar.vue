@@ -1,16 +1,23 @@
 <template>
   <div class="flex justify-between max-w-3xl px-4 py-4 mx-auto sm:px-8">
-    <!-- Navigation -->
     <div class="text-gray-700 dark:text-gray-200">
       <ContentNavigation v-slot="{ navigation }">
         <NuxtLink
           v-for="link of navigation"
           :key="link._path"
+          v-slot="{ isActive }"
           :to="link._path"
-          active-class="font-bold"
           class="mr-4"
         >
-          {{ link.navTitle || link.title }}
+          <span
+            class="border-b-2 transition pb-1"
+            :class="{
+              'border-indigo-500': isActive,
+              'border-transparent': !isActive,
+            }"
+          >
+            {{ link.navTitle || link.title }}
+          </span>
         </NuxtLink>
       </ContentNavigation>
     </div>

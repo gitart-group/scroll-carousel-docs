@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
+import helperModule from './helper-module'
 
 export default defineNuxtConfig({
   css: [
@@ -12,10 +13,13 @@ export default defineNuxtConfig({
     ],
   },
 
+  components: true,
+
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
+    helperModule,
   ],
   colorMode: {
     classSuffix: '',

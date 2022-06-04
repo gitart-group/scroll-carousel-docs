@@ -4,10 +4,8 @@ import 'gitart-scroll-carousel/dist/index.css'
 import 'gitart-scroll-carousel/dist/GSArrow.css'
 import 'gitart-scroll-carousel/dist/GSLayoutNumeric.css'
 
-import { createItems } from './shared/helpers'
-import ImageSlide from './shared/ImageSlide.vue'
-
-const items = createItems(15)
+import ImageSlide from '@/components/shared/ImageSlide.vue'
+const items = useItems(15)
 </script>
 
 <template>

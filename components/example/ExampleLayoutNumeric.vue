@@ -4,10 +4,9 @@ import 'gitart-scroll-carousel/dist/index.css'
 import 'gitart-scroll-carousel/dist/GSArrow.css'
 import 'gitart-scroll-carousel/dist/GSLayoutNumeric.css'
 
-import { createItems } from './shared/helpers'
-import ImageSlide from './shared/ImageSlide.vue'
+import ImageSlide from '@/components/shared/ImageSlide.vue'
 
-const items = createItems(15)
+const items = useItems(15)
 
 const layoutProps = reactive({
   disableControls: false,
