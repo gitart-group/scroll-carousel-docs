@@ -3269,10 +3269,10 @@ gitart-animate-number@^0.1.0:
   dependencies:
     bezier-easing "^2.1.0"
 
-gitart-scroll-carousel@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/gitart-scroll-carousel/-/gitart-scroll-carousel-0.2.3.tgz#feda8734c9b64c025332846e473a1ac559f82741"
-  integrity sha512-Jw94ZrRh77bRj1L0YtDB/jm8HYkJoEbtCDo40gt+KckGM+rg5Kv5HMAh35yTtQCL3keH2UPQGZ4E4M1splkvgA==
+gitart-scroll-carousel@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gitart-scroll-carousel/-/gitart-scroll-carousel-1.0.0.tgz#32e0b799fc29313c98cb10def2b6228daafb7671"
+  integrity sha512-RGOAWMOAr+OtVwh2pLrIFykL3NPPKF0cfL4/59I0WcuZ4sqDKR/8odMLMj8sWKrZf+FHF8Bj6/nMFUw5HlVwdg==
   dependencies:
     "@vueuse/core" "^8.2.0"
     bezier-easing "^2.1.0"

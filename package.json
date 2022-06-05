@@ -21,6 +21,6 @@
   "dependencies": {
     "@gitart/eslint-config-vue": "^0.1.1",
     "@vueuse/core": "^8.6.0",
-    "gitart-scroll-carousel": "^0.2.3"
+    "gitart-scroll-carousel": "^1.0.0"
   }
 }
