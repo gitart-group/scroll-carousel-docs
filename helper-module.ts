@@ -39,7 +39,7 @@ export default defineNuxtModule({
         return [
           'import { defineNuxtPlugin } from \'#app\'',
           ...flattenComponents.map((component) => {
-            return `const ${component.name} = defineAsyncComponent(() => import('${component.path}'))`
+            return `import ${component.name} from '${component.path}'`
           }),
           '\n',
           'export default defineNuxtPlugin(async(nuxtApp) => {',
