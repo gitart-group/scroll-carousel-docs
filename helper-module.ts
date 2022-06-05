@@ -17,6 +17,7 @@ export default defineNuxtModule({
     const components = await Promise.all([
       resolve('components/demo'),
       resolve('components/example'),
+      resolve('components/ui'),
     ].map(async(dir) => {
       const files = await fs.promises.readdir(dir)
       return files.map((fileName) => {

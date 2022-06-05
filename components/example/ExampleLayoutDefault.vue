@@ -19,15 +19,11 @@ const layoutProps = reactive({
 
 <template>
   <div>
-    <div>
-      <label class="inline-flex items-center py-2 cursor-pointer">
-        <input
-          v-model="layoutProps.disableArrows"
-          type="checkbox"
-          class="form-checkbox"
-        >
-        <span class="ml-2 font-medium text-sm">Disable arrows</span>
-      </label>
+    <div class="mb-5 flex flex-wrap gap-5">
+      <ControlCheckbox
+        v-model="layoutProps.disableArrows"
+        :label="'disable-arrows'"
+      />
     </div>
 
     <GSCarousel

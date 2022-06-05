@@ -9,21 +9,23 @@ import ImageSlide from '@/components/shared/ImageSlide.vue'
 const items = useItems(15)
 
 const layoutProps = reactive({
-  disableControls: false,
+  disableArrows: false,
+  disableCounter: false,
 })
 </script>
 
 <template>
   <div>
-    <div>
-      <label class="inline-flex items-center py-2 cursor-pointer">
-        <input
-          v-model="layoutProps.disableControls"
-          type="checkbox"
-          class="form-checkbox"
-        >
-        <span class="ml-2 font-medium text-sm">Disable controls</span>
-      </label>
+    <div class="mb-5 flex flex-wrap gap-5">
+      <ControlCheckbox
+        v-model="layoutProps.disableArrows"
+        :label="'disable-arrows'"
+      />
+
+      <ControlCheckbox
+        v-model="layoutProps.disableCounter"
+        :label="'disable-counter'"
+      />
     </div>
 
     <GSCarousel
