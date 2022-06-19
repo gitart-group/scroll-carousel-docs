@@ -7,7 +7,7 @@ import 'gitart-scroll-carousel/dist/GSLayoutDefault.css'
 
 import ImageSlide from '@/components/shared/ImageSlide.vue'
 
-const items = useItems(15)
+const items = reactive(useItems(15))
 const {
   currentLayoutKey,
   layout,
@@ -21,6 +21,13 @@ const propsValues = reactive({
   sticky: false,
 })
 
+const itemsCount = ref(items.length)
+const onUpdateItemsCount = (count: number) => {
+  items.splice(0, items.length)
+  items.push(...useItems(count))
+  itemsCount.value = items.length
+}
+
 const props = computed(() => ({
   items,
   itemGap: propsValues.itemGap,
@@ -28,7 +35,7 @@ const props = computed(() => ({
   previewSize: propsValues.previewSize,
   itemsToShow: propsValues.itemsToShow,
   sticky: propsValues.sticky,
-  key: layout.value, // re-render on layout change
+  key: `${layout.value}-${itemsCount.value}`, // re-render on layout change
 }))
 </script>
 
@@ -59,6 +66,14 @@ const props = computed(() => ({
         :label="'item-gap | %{1}'"
         min="0"
         max="50"
+      />
+
+      <ControlRange
+        :model-value="itemsCount"
+        :label="'Items | %{1}'"
+        min="1"
+        max="18"
+        @update:model-value="onUpdateItemsCount"
       />
 
       <ControlCheckbox
